@@ -1,0 +1,52 @@
+#pragma once
+
+// TODO
+#define DEVICE_ID 1
+
+#define IS_DEBUG
+/*** Option: 433E6,470E6,868E6,915E6 ****/
+#define LORA_FREQUENCY 868E6
+
+#define POSITION_MESSAGE_INTERVALL 15000
+#define GPS_FREQUENZ 1000
+#define POSITION_SMOOTHING POSITION_MESSAGE_INTERVALL/GPS_FREQUENZ
+
+#define DEVICE_MESSAGE_INTERVALL 55000
+
+//Timer id
+#define TIMER_POSITION_UPDATE_ID 0
+#define TIMER_POSITION_MESSAGE_ID 1
+#define TIMER_DEVICE_INFO_MESSAGE_ID 2
+
+
+
+
+// Board Configuration Start
+
+#define BUTTON_PIN 38
+#define BUTTON_PIN_MASK GPIO_SEL_38
+#define I2C_SDA 21
+#define I2C_SCL 22
+#define PMU_IRQ 35
+
+#define RADIO_SCLK_PIN 5
+#define RADIO_MISO_PIN 19
+#define RADIO_MOSI_PIN 27
+#define RADIO_CS_PIN 18
+#define RADIO_DIO0_PIN 26
+#define RADIO_RST_PIN 23
+#define RADIO_DIO1_PIN 33
+#define RADIO_BUSY_PIN 32
+
+#define BOARD_LED 4
+#define LED_ON LOW
+#define LED_OFF HIGH
+
+// GPS Configuration
+#define GPS_BAUD_RATE 9600
+#define GPS_RX_PIN 34
+#define GPS_TX_PIN 12
+#define GPS_SERIAL_CONFIG SERIAL_8N1
+
+#define HAS_GPS
+#define HAS_PMU
